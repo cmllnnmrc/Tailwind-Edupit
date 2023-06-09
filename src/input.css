@@ -7,6 +7,25 @@
     @apply max-w-[100rem] mx-auto p-[1rem]
 }
 
+.bg-clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+@layer utilities{
+    .btn{
+        @apply inline-block p-[1rem] border-transparent
+    }
+
+    .green{
+        @apply bg-primary rounded-[.3rem] hover:bg-dark transition ease-in-out duration-300 font-[600]
+    }
+
+    .shallow-green{
+        @apply bg-transparent rounded-[.3rem] border-[1px] border-primary hover:bg-primary transition ease-in-out duration-300 font-[600]
+    }
+}
+
 @layer components{
 
     /** ---------- MOBILE HEADER ---------- */
@@ -39,27 +58,27 @@
         @apply max-h-fit
     }
 
-    .header-mob__nav ul li{
+    .header-mob__nav ul li.first-drop{
         @apply border-t-[1px] cursor-pointer
     }
 
-    .header-mob__nav ul li h4{
+    .header-mob__nav ul li.first-drop h4{
         @apply flex items-center justify-between px-[1rem] py-[.9rem]
     }
 
-    .header-mob__nav ul li:hover h4 i{
+    .header-mob__nav ul li.first-drop:hover h4 i{
         @apply text-primary
     }
 
-    .header-mob__nav ul li h4 span{
+    .header-mob__nav ul li.first-drop h4 span{
         @apply text-[.8rem] font-[700] text-dgrey
     }
 
-    .header-mob__nav ul li h4 i{
+    .header-mob__nav ul li.first-drop h4 i{
         @apply text-[.7rem] mr-[1rem] text-black transition ease-linear duration-300
     }
 
-    .header-mob__nav ul li h4 i.open{
+    .header-mob__nav ul li.first-drop h4 i.open{
         @apply transition ease-linear duration-300
     }
 
@@ -68,43 +87,51 @@
     }
 
     .header-mob__nav ul li ul.open{
-        @apply max-h-[50rem]
+        @apply max-h-fit
     }
 
-    .header-mob__nav ul li ul li{
-        @apply py-[.5rem]
+    .header-mob__nav ul li ul.second-drop li{
+        @apply py-[.5rem] border-t-[1px]
     }
 
-    .header-mob__nav ul li ul li:hover{
+    .header-mob__nav ul li ul.second-drop li:hover{
         @apply bg-dgrey bg-opacity-5 text-primary transition ease-in-out duration-300
     }
 
-    .header-mob__nav ul li ul li a{
+    .header-mob__nav ul li ul.second-drop li a{
         @apply text-[.8rem] px-[2rem] flex
     }
 
-    .header-mob__nav ul li ul li h4{
+    .header-mob__nav ul li ul.second-drop li h4{
         @apply text-[.8rem] py-0 mb-2 flex items-center justify-between pl-[2rem]
     }
 
-    .header-mob__nav ul li ul li h4 span{
+    .header-mob__nav ul li ul.second-drop li h4 span{
         @apply font-[400] text-black 
     }
 
-    .header-mob__nav ul li:hover ul li h4 i{
+    .header-mob__nav ul li:hover ul.second-drop li h4 i{
         @apply font-[400] text-black 
     }
 
-    .header-mob__nav ul li ul li:hover h4 i{
+    .header-mob__nav ul li ul.second-drop li:hover h4 i{
         @apply text-primary
     }
 
-    .header-mob__nav ul li:hover ul li ul li a{
+    .header-mob__nav ul li:hover ul.second-drop li ul li a{
         @apply text-black
     }
 
     .header-mob__nav ul li ul li ul li a{
         @apply text-[.8rem] px-[4rem] flex hover:text-primary
+    }
+
+    .header-mob__nav ul li ul li:hover ul.third-drop li{
+        @apply  bg-light
+    }
+
+    .header-mob__nav ul li ul li ul.third-drop li:hover{
+        @apply  bg-dgrey bg-opacity-5 text-primary transition ease-in-out duration-300
     }
 
     .toggle__menu.open span{
@@ -191,12 +218,16 @@
         @apply flex gap-x-[1.5rem]
     }
 
+    .header2__nav ul li a{
+        @apply py-[2rem]
+    }
+
     .header2__nav ul li ul{
-        @apply bg-primary flex flex-col gap-x-[1rem] absolute top-[3rem] opacity-0
+        @apply bg-primary flex flex-col gap-x-[1rem] absolute lg:hidden top-[3rem] opacity-0
     }
 
     .header2__nav ul li:hover ul{
-        @apply max-h-fit p-[1rem] w-[15rem] opacity-100
+        @apply max-h-fit p-[1rem] w-[15rem] block opacity-100
     }
 
     .header2__nav ul li ul li:not(:first-child){
@@ -207,10 +238,13 @@
         @apply absolute top-[0] right-[-15rem] opacity-0
     }
 
-    .header2__nav ul li ul li:hover ul{
+    .header2__nav ul li:hover ul li ul{
         @apply max-h-fit p-[1rem] w-[15rem] opacity-100
     }
 
+    .header2__btn{
+        @apply text-light ml-[2rem]
+    }
 
 
     /** ---------- BANNER ---------- */
@@ -220,26 +254,61 @@
     }
 
     .banner__content{
-        @apply text-light flex flex-col items-center justify-between text-center
+        @apply text-light flex flex-col items-center justify-between text-center lg:items-start lg:text-left
+    }
+
+    .banner__item{
+        @apply text-light flex items-center justify-between
     }
 
     .banner__text{
-        @apply flex flex-col items-center
+        @apply flex flex-col items-center lg:items-start
     }
 
     .banner__text h1{
-        @apply text-[1.5rem] font-[700] w-[60%]
+        @apply text-[1.7rem] font-[700] w-[70%] lg:w-[48rem] lg:text-[4rem]
     }
 
     .banner__text p{
-        @apply mt-[1rem] text-[1.4rem] font-[600] w-[95%]
+        @apply mt-[1rem] text-[1.4rem] font-[600] w-[26rem] lg:w-[40rem]
     }
 
-    .banner__content img{
-        @apply hidden lg:w-[40rem]
+    .banner__item img{
+        @apply hidden lg:w-[40rem] lg:block
     }
 
     .banner__content ul{
-        @apply flex gap-x-[1rem] mt-[2rem]
+        @apply flex gap-x-[1rem] mt-[2rem] tracking-[.1rem]
+    }
+
+    .banner__content ul li a{
+        @apply min-w-[12rem] text-center lg:min-w-fit
+    }
+
+
+    /** ---------- FEATURE BANNER ---------- */
+
+    .feature{
+        @apply p-[1rem]
+    }
+
+    .feature__wrapper{
+        @apply flex gap-x-[1rem]
+    }
+
+    .feature__card{
+        @apply flex bg-light border-[2px] border-primary w-fit hover:shadow-[0px_0px_20px_0px_rgba(0,0,0,.5)] max-w-[30rem] min-h-[20rem]
+    }
+
+    .feature__content{
+        @apply flex flex-col items-center text-center justify-center min-h-[20rem]
+    }
+
+    .feature__content img{
+        @apply mb-[1rem]
+    }
+
+    .feature__text h3{
+        @apply text-[1.5rem] font-[600] text-dark
     }
 }

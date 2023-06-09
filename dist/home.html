@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edupit - Home</title>
     <link rel="stylesheet" href="./output.css">
-    <script src="https://kit.fontawesome.com/4f3a4a675c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"><script src="https://kit.fontawesome.com/4f3a4a675c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -149,14 +149,14 @@
                         </ul>
                     </div>
                     <div class="header2__btn">
-                        <a href="">Get A Qoute</a>
+                        <a href="" class="btn green">Get A Qoute</a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="header-mob">
+    <header class="header-mob">
         <div class="branding">
             <img src="./edupit-img/mob-logo.png" alt="">
         </div>
@@ -176,38 +176,38 @@
         </div>
         <div class="header-mob__nav">
             <ul>
-                <li>
+                <li class="first-drop">
                     <h4><span>HOME</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">Home One</a></li>
                         <li><a href="">Home Two</a></li>
                         <li><a href="">Landing Page</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="first-drop">
                     <h4><span>ABOUT</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">About</a></li>
                         <li><a href="">About Style 02</a></li>
                         <li><a href="">About Style 03</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="first-drop">
                     <h4><span>COURSES</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">Courses</a></li>
                         <li><a href="">Instructor Registration</a></li>
                         <li><a href="">Student Registration</a></li>
                         <li><a href="">Dashboard</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="first-drop">
                     <h4><span>ACADEMICS</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">Academics</a></li>
                         <li>
                             <h4><span>Admission</span><i class="fa-solid fa-plus"></i></h4>
-                            <ul>
+                            <ul class="third-drop">
                                 <li><a href="">Admission</a></li>
                                 <li><a href="">Tuition & Fees</a></li>
                                 <li><a href="">How To Apply</a></li>
@@ -216,7 +216,7 @@
                         </li>
                         <li>
                             <h4><span>Elements</span><i class="fa-solid fa-plus"></i></h4>
-                            <ul>
+                            <ul class="third-drop">
                                 <li><a href="">Portfolio</a></li>
                                 <li><a href="">Feature</a></li>
                                 <li><a href="">Our Clients</a></li>
@@ -231,7 +231,7 @@
                         </li>
                         <li>
                             <h4><span>Service Style</span><i class="fa-solid fa-plus"></i></h4>
-                            <ul>
+                            <ul class="third-drop">
                                 <li><a href="">Service Style</a></li>
                                 <li><a href="">Service Style 02</a></li>
                                 <li><a href="">Service Style 03</a></li>
@@ -240,7 +240,7 @@
                         </li>
                         <li>
                             <h4><span>Team</span><i class="fa-solid fa-plus"></i></h4>
-                            <ul>
+                            <ul class="third-drop">
                                 <li><a href="">Team</a></li>
                                 <li><a href="">Team Details</a></li>
                             </ul>
@@ -259,9 +259,9 @@
                         <li><a href="">FAQ'S</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="first-drop">
                     <h4><span>BLOG</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">Blog</a></li>
                         <li><a href="">Blog Left Slidebar</a></li>
                         <li><a href="">Blog Right Slidebar</a></li>
@@ -269,9 +269,9 @@
                         <li><a href="">Blog Right 2Column</a></li>
                     </ul>
                 </li>
-                <li>
+                <li class="first-drop">
                     <h4><span>CONTACT</span><i class="fa-solid fa-plus"></i></h4>
-                    <ul>
+                    <ul class="second-drop">
                         <li><a href="">Contact</a></li>
                         <li><a href="">Contact Style 02</a></li>
                         <li><a href="">Contact Style 03</a></li>
@@ -281,26 +281,104 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </header>
 
     <section class="banner">
         <div class="container">
             <div class="banner__item">
                 <div class="banner__content">
+                    <div class="banner__bg-text">
+                        <h1>EDUPIT</h1>
+                    </div>
                     <div class="banner__text">
                         <h1>Education is the Backbone of the Nation.</h1>
                         <p>Get the most of reduction in your team's operating creates amazing UI/UX experiences.</p>
                     </div>
-                    <img src="./edupit-img/banner-img1.png" alt="">
                     <ul>
-                        <li><a href="">START TRIAL</a></li>
-                        <li><a href="">VIEW COURSES</a></li>
+                        <li><a href="" class="btn green">START TRIAL</a></li>
+                        <li><a href="" class="btn shallow-green">VIEW COURSES</a></li>
                     </ul>
+                </div>
+                <img src="./edupit-img/banner-img1.png" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="feature">
+        <div class="container">
+            <div class="feature__wrapper">
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img1.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img2.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img3.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img4.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img5.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature__card">
+                    <div class="feature__content">
+                        <img src="./edupit-img/feature-img4.png" alt="">
+                        <div class="feature__text">
+                            <h3>Non-Resident</h3>
+                            <p>Student(100)</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+    
+    <script type="module">
+      // import {tns} from './src/tiny-slider.js';
+      var slider = tns({
+          container: '.feature__wrapper',
+          items: 1,
+          slideBy: 'page',
+          autoplay: true,
+          controls: false,
+          nav: true,
+          autoplayButtonOutput: false,
+        });
+  </script>
 </body>
 </html>
