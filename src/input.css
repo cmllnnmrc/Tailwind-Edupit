@@ -8,21 +8,21 @@
 }
 
 .bg-clip-text {
-    background-clip: text;
-    -webkit-background-clip: text;
+    -webkit-text-stroke-color: #ffffff;
+    -webkit-text-stroke-width: 3px;
   }
 
 @layer utilities{
     .btn{
-        @apply inline-block p-[1rem] border-transparent
+        @apply inline-block py-[.8rem] px-[1.5rem] border-transparent
     }
 
     .green{
-        @apply bg-primary rounded-[.3rem] hover:bg-dark transition ease-in-out duration-300 font-[600]
+        @apply text-[1.2rem] bg-primary rounded-[.3rem] hover:bg-dark transition ease-in-out duration-300 font-[600]
     }
 
     .shallow-green{
-        @apply bg-transparent rounded-[.3rem] border-[1px] border-primary hover:bg-primary transition ease-in-out duration-300 font-[600]
+        @apply text-[1.2rem] bg-transparent rounded-[.3rem] border-[1px] border-primary hover:bg-primary transition ease-in-out duration-300 font-[600]
     }
 }
 
@@ -250,11 +250,15 @@
     /** ---------- BANNER ---------- */
 
     .banner{
-        @apply flex items-center relative bg-banner-bg min-h-[85vh] lg:min-h-[120vh] bg-cover bg-no-repeat lg:justify-start
+        @apply flex items-center relative bg-banner-bg min-h-[73vh] lg:min-h-[120vh] bg-cover bg-no-repeat lg:justify-start
     }
 
     .banner__content{
-        @apply text-light flex flex-col items-center justify-between text-center lg:items-start lg:text-left
+        @apply relative text-light flex flex-col items-center justify-between text-center lg:items-start lg:text-left
+    }
+
+    .banner__bg-text h1{
+        @apply absolute left-0 top-[-3rem] bg-clip-text text-[4.5rem] text-transparent opacity-[.07] lg:text-[7rem] lg:top-[-2.5rem]
     }
 
     .banner__item{
@@ -278,11 +282,11 @@
     }
 
     .banner__content ul{
-        @apply flex gap-x-[1rem] mt-[2rem] tracking-[.1rem]
+        @apply flex gap-x-[.5rem] mt-[4rem] tracking-[.1rem]
     }
 
     .banner__content ul li a{
-        @apply min-w-[12rem] text-center lg:min-w-fit
+        @apply text-center lg:min-w-fit
     }
 
 
@@ -297,18 +301,189 @@
     }
 
     .feature__card{
-        @apply flex bg-light border-[2px] border-primary w-fit hover:shadow-[0px_0px_20px_0px_rgba(0,0,0,.5)] max-w-[30rem] min-h-[20rem]
+        @apply flex rounded-[1rem] bg-light border-[2px] border-lgreen w-fit hover:shadow-[0px_0px_50px_0px_rgba(0,0,0,.09)] mb-[1rem] mx-[.4rem] max-w-[30rem] min-h-[18rem] transition ease-in-out duration-300
     }
 
     .feature__content{
-        @apply flex flex-col items-center text-center justify-center min-h-[20rem]
+        @apply flex flex-col items-center text-center justify-center min-h-[18rem]
     }
 
     .feature__content img{
         @apply mb-[1rem]
     }
 
-    .feature__text h3{
-        @apply text-[1.5rem] font-[600] text-dark
+    .feature__text a{
+        @apply text-[1.5rem] font-[600] text-dark hover:text-primary transition ease-in-out duration-300
+    }
+
+    .feature__text p{
+        @apply text-[1.1rem] font-[500] text-primary cursor-default
+    }
+
+
+
+    /** ---------- ABOUT BANNER ---------- */
+
+    .about{
+        @apply py-[2rem]
+    }
+
+    .about__title{
+        @apply my-[2rem]
+    }
+
+    .about__title h3{
+        @apply text-[1.5rem] text-primary font-[800]
+    }
+
+    .about__title h4{
+        @apply text-[1.5rem] text-dark font-[800]
+    }
+
+    .about__title p{
+        @apply text-grey text-[1.2rem]
+    }
+
+    .about__text{
+        @apply my-[1.5rem] border-l-[3px] border-primary pl-[.5rem] pb-[1rem] text-grey
+    }
+
+    .about__text h5{
+        @apply text-[1.3rem]
+    }
+
+    .about__slider h4{
+        @apply text-[1.5rem] font-[700] mb-[1rem] text-dark
+    }
+
+    .about__circle{
+        @apply relative h-[3px] w-[90px] bg-primary rounded-[30px]
+    }
+
+    .about__circle:before{
+        @apply content-[''] absolute left-0 top-[50%] translate-y-[-50%] border-[6px] border-primary rounded-full animate-sliding1
+    }
+
+    .about__circle:after{
+        @apply content-[''] absolute right-0 top-[50%] translate-y-[-50%] border-[6px] border-primary rounded-full animate-sliding2
+    }
+
+    .about__slider-wrapper{
+        @apply flex items-center justify-between gap-x-[1rem] mt-[2rem] mx-auto
+    }
+
+    .about__slider-wrapper img{
+        @apply max-w-[4rem] mx-auto
+    }
+
+
+
+    /** ---------- COURSE BANNER ---------- */
+
+    .course{
+        @apply bg-course-bg min-h-[50rem] bg-cover bg-center py-[7rem]
+    }
+
+    .course__title{
+        @apply text-center font-[700] text-[1.6rem] text-primary pb-[3rem]
+    }
+
+    .course__title h4{
+        @apply text-dark px-[3rem]
+    }
+
+    .course__card{
+        @apply bg-light shadow-[0_4px_23px_rgba(0,0,0,.1)] rounded-b-[.5rem] mb-[1.5rem] transition ease-in-out duration-300
+    }
+
+    .course__card:hover{
+        @apply translate-y-[-.5rem] transition ease-in-out duration-300
+    }
+
+    .course__img{
+        @apply relative
+    }
+
+    .course__img-content{
+        @apply absolute top-0 p-[1rem] w-[28.2rem]
+    }
+
+    .course__img-content ul{
+        @apply flex justify-between items-center
+    }
+
+    .course__img-content ul li:first-child{
+        @apply bg-primary px-[.7rem] py-[.3rem] rounded-[.3rem]
+    }
+
+    .course__img-content ul li:first-child {
+        @apply text-light text-[1.1rem]
+    }
+
+    .course__img-content ul li:last-child{
+        @apply bg-light px-[.6rem] py-[.2rem] rounded-[.2rem]
+    }
+
+    .course__img-content ul li:last-child a{
+        @apply text-primary text-[1.5rem]
+    }
+
+    .course__content{
+        @apply py-[1rem]
+    }
+
+    .course__text{
+        @apply p-[1rem]
+    }
+
+    .course__text ul li{
+        @apply flex items-center text-[1.1rem] text-grey
+    }
+
+    .course__text ul li span{
+        @apply italic ml-[.2rem]
+    }
+
+    .course__text ul li i{
+        @apply text-[.8rem] mr-[.3rem] text-primary
+    }
+
+    .course__text ul li a{
+        @apply mx-[.2rem] text-dblue font-[600]
+    }
+
+    .course__text ul li:nth-child(2){
+        @apply my-[1rem] pr-[2rem]
+    }
+
+    .course__text ul li:nth-child(2) a{
+        @apply text-dark font-[600] hover:text-primary transition ease-in-out duration-300
+    }
+
+    .course__text ul li img{
+        @apply w-[2rem] rounded-full mr-[.5rem]
+    }
+
+    .course__subtext{
+        @apply border-t-[1px] p-[1rem] flex items-center justify-between
+    }
+
+    .course__subtext p{
+        @apply text-dark text-[1.1rem] font-[600]
+    }
+
+    .course__subtext a{
+        @apply text-[1.1rem]
+    }
+
+
+    /** ---------- COURSE BANNER ---------- */
+
+    .instructor__title{
+        @apply font-[700] text-[1.6rem] text-primary pb-[3rem]
+    }
+
+    .instructor__title h4{
+        @apply text-dark w-[17rem]
     }
 }

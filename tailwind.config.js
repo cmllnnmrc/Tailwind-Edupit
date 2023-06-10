@@ -8,7 +8,10 @@ module.exports = {
         'dark': '#2A374C',
         'light': '#FFFFFF',
         'dgrey': '#444',
-        'lblue': '#18406b'
+        'lblue': '#18406b',
+        'lgreen': '#C6F9E9',
+        'grey': '#777777',
+        'dblue': '#4b5981',
       },
 
       screens:{
@@ -18,8 +21,33 @@ module.exports = {
       },
 
       backgroundImage: {
-        'banner-bg': 'url("./edupit-img/banner-bg.jpg")'
+        'banner-bg': 'url("./edupit-img/banner-bg.jpg")',
+        'course-bg': 'url("./edupit-img/course-bg.png")'
       },
+
+      keyframes: {
+        sliding1: {
+          from: {
+            left: '0',
+          },
+          to: {
+            left: '100%',
+          },
+        },
+        sliding2: {
+          from: {
+            right: '0',
+          },
+          to: {
+            right: '100%'
+          },
+        },
+      },
+
+      animation: {
+        sliding1: 'sliding1 3s linear infinite',
+        sliding2: 'sliding2 3s linear infinite',
+      }
     },
   },
   plugins: [
