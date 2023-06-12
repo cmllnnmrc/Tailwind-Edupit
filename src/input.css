@@ -20,6 +20,10 @@
     @apply bg-primary rounded-full p-[.5rem]
 }
 
+.feature .tns-outer{
+    @apply translate-y-[-5rem]
+}
+
 @layer utilities{
     .btn{
         @apply inline-block py-[.8rem] px-[1.5rem] border-transparent
