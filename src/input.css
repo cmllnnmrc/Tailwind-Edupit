@@ -24,6 +24,10 @@
     .shallow-green{
         @apply text-[1.2rem] bg-transparent rounded-[.3rem] border-[1px] border-primary hover:bg-primary transition ease-in-out duration-300 font-[600]
     }
+
+    .shallow-white{
+        @apply text-[1.2rem] bg-transparent border-[1px] border-grey rounded-[.3rem] text-dark hover:text-light hover:bg-primary hover:border-primary transition ease-in-out duration-300
+    }
 }
 
 @layer components{
@@ -477,13 +481,149 @@
     }
 
 
-    /** ---------- COURSE BANNER ---------- */
+    /** ---------- INSTRUCTOR BANNER ---------- */
+
+    .instructor{
+        @apply py-[1rem]
+    }
 
     .instructor__title{
-        @apply font-[700] text-[1.6rem] text-primary pb-[3rem]
+        @apply font-[700] text-[1.6rem] text-primary pb-[2rem]
     }
 
     .instructor__title h4{
         @apply text-dark w-[17rem]
+    }
+
+    .instructor__card{
+        @apply text-center bg-light border-[2px] border-lgreen rounded-[.5rem] py-[3rem] shadow-[0px_5px_4px_0px_rgba(0,0,0,.05)] overflow-hidden mb-[.5rem] px-[.5rem]
+    }
+
+    .instructor__card:hover{
+        @apply  border-light transition ease-in-out duration-300
+    }
+
+    .instructor__card:hover .instructor__social:before{
+        @apply w-[100%] bg-primary transition-all duration-300
+    }
+
+    .instructor__content{
+        @apply mb-[1rem] flex flex-col items-center
+    }
+
+    .instructor__content h3{
+        @apply text-[1.5rem] font-[600] text-dark pt-[.5rem]
+    }
+
+    .instructor__content p{
+        @apply text-[1.1rem] text-grey
+    }
+
+    .instructor__social{
+        @apply relative flex justify-center
+    }
+
+    .instructor__social:before{
+        @apply absolute content-[''] bg-[#ddd] top-0 h-[1px] w-[25%] m-auto transition-all duration-300
+    }
+
+    .instructor__social ul{
+        @apply flex pt-[1.5rem]
+    }
+
+    .instructor__social ul li:nth-child(2){
+        @apply mx-[.5rem]
+    }
+
+    .instructor__social ul li:first-child a{
+        @apply px-[.8rem]
+    }
+
+    .instructor__social ul li a{
+        @apply bg-lgreen px-[.7rem] py-[.5rem] text-primary text-[1rem] rounded-[.2rem]
+    }
+
+    .instructor__social ul li a:hover{
+        @apply text-light bg-primary transition ease-in-out duration-300
+    }
+
+
+
+    /** ---------- PROGRAM BANNER ---------- */
+
+    .program{
+        @apply my-[2rem]
+    }
+
+    .program__title{
+        @apply text-center font-[700] text-[1.6rem] text-primary pb-[3rem]
+    }
+
+    .program__title h4{
+        @apply text-dark px-[3rem]
+    }
+
+    .program__card{
+        @apply bg-light border-[2px] border-lgreen rounded-[.5rem] shadow-[0px_0px_30px_0px_rgba(0,0,0,.03)] py-[1.3rem]
+    }
+
+    .program__card:not(:first-child){
+        @apply mt-[1.5rem]
+    }
+
+    .program__card:hover{
+        @apply border-light shadow-[0px_0px_50px_0px_rgba(0,0,0,.06)]
+    }
+
+    .program__content{
+        @apply flex flex-col items-center py-[3rem]
+    }
+
+    .program__content a{
+        @apply text-[1.5rem] text-dark hover:text-primary font-[600] my-[.5rem] transition ease-in-out duration-300
+    }
+
+    .program__content p{
+        @apply text-[1.1rem] text-grey
+    }
+
+
+
+    /** ---------- PROGRAM BANNER ---------- */
+
+    .news__title{
+        @apply font-[700] text-[1.6rem] text-primary pb-[2rem]
+    }
+
+    .news__title h4{
+        @apply text-dark w-[25rem]
+    }
+
+    .news__card{
+        @apply bg-light shadow-[0px_0px_50px_0px_rgba(0,0,0,.09)]
+    }
+
+    .news__content{
+        @apply px-[.5rem] py-[1rem]
+    }
+
+    .news__content a{
+        @apply text-[1.3rem] font-[600]
+    }
+
+    .news__content ul{
+        @apply flex items-center mt-[1rem] mb-[2rem]
+    }
+
+    .news__content ul li{
+        @apply text-[1.2rem] font-[400] mr-[1rem] text-primary
+    }
+
+    .news__content ul li i{
+        @apply mr-[.5rem]
+    }
+
+    .news__content ul li a{
+        @apply text-[1.2rem] font-[400]
     }
 }

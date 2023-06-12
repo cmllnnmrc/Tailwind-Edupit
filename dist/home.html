@@ -566,6 +566,142 @@
                         <h3>Chris Anderson</h3>
                         <p>Partner</p>
                     </div>
+                    <div class="instructor__social">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="instructor__card">
+                    <div class="instructor__content">
+                        <img src="./edupit-img/instructor-img2.jpg" alt="">
+                        <h3>Ethan J. Cooper</h3>
+                        <p>Managing Partner</p>
+                    </div>
+                    <div class="instructor__social">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="instructor__card">
+                    <div class="instructor__content">
+                        <img src="./edupit-img/instructor-img1.jpg" alt="">
+                        <h3>Russel Smith</h3>
+                        <p>Product Officer</p>
+                    </div>
+                    <div class="instructor__social">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="instructor__card">
+                    <div class="instructor__content">
+                        <img src="./edupit-img/instructor-img2.jpg" alt="">
+                        <h3>Ethan J. Cooper</h3>
+                        <p>Managing Partner</p>
+                    </div>
+                    <div class="instructor__social">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="program">
+        <div class="container">
+            <div class="program__title">
+                <h3>OUR SCHOOL FACILITY</h3>
+                <h4>All the benefits you get in our education program !</h4>
+            </div>
+            <div class="program__wrapper">
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img1.jpg" alt="">
+                        <a href="">Computer Science</a>
+                        <p>01 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img2.jpg" alt="">
+                        <a href="">Development</a>
+                        <p>42 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img3.jpg" alt="">
+                        <a href="">Chemistry</a>
+                        <p>15 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img4.jpg" alt="">
+                        <a href="">Architecture</a>
+                        <p>05 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img5.jpg" alt="">
+                        <a href="">Physics</a>
+                        <p>07 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img6.jpg" alt="">
+                        <a href="">Islamic History</a>
+                        <p>15 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img7.jpg" alt="">
+                        <a href="">Political Science</a>
+                        <p>12 Courses</p>
+                    </div>
+                </div>
+                <div class="program__card">
+                    <div class="program__content">
+                        <img src="./edupit-img/program-img8.jpg" alt="">
+                        <a href="">Philosophy</a>
+                        <p>01 Courses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="news">
+        <div class="container">
+            <div class="news__title">
+                <h3>NEWS</h3>
+                <h4>All the benefits you get in our latest news & blog</h4>
+            </div>
+            <div class="news__card">
+                <img src="./edupit-img/news-img1.jpg" alt="">
+                <div class="news__content">
+                    <a href="">Transforming our in science facilities</a>
+                    <ul>
+                        <li><i class="fa-solid fa-tag"></i><a href="">Architecture</a></li>
+                        <li><i class="fa-regular fa-clock"></i>05 May 2021</li>
+                    </ul>
+                    <a href="" class="btn shallow-white">VIEW More</a>
                 </div>
             </div>
         </div>
@@ -588,6 +724,15 @@
       var slider = tns({
           container: '.about__slider-wrapper',
           items: 2,
+          slideBy: 'page',
+          autoplay: true,
+          controls: false,
+          nav: true,
+          autoplayButtonOutput: false,
+        });
+        var slider = tns({
+          container: '.instructor__wrapper',
+          items: 1,
           slideBy: 'page',
           autoplay: true,
           controls: false,
