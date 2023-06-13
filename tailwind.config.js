@@ -22,7 +22,9 @@ module.exports = {
 
       backgroundImage: {
         'banner-bg': 'url("./edupit-img/banner-bg.jpg")',
-        'course-bg': 'url("./edupit-img/course-bg.png")'
+        'banner-img1': 'url("./edupit-img/banner-img1.png")',
+        'banner-img2': 'url("./edupit-img/banner-img2.png")',
+        'course-bg': 'url("./edupit-img/course-bg.png")',
       },
 
       keyframes: {
