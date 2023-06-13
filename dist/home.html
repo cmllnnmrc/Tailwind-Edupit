@@ -720,6 +720,13 @@
           controls: false,
           nav: true,
           autoplayButtonOutput: false,
+          responsive: {
+            1024: {
+                items: 4,
+                controls: true,
+                controlsText: ['<i class="fa-solid fa-arrow-left"></i>', '<i class="fa-solid fa-arrow-right"></i>'],
+            }
+          }
         });
       var slider = tns({
           container: '.about__slider-wrapper',
