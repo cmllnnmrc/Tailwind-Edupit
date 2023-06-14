@@ -4,7 +4,11 @@
 
 
 .container{
-    @apply max-w-[100rem] mx-auto p-[1rem]
+    @apply max-w-[80rem] mx-auto p-[1rem]
+}
+
+body{
+    @apply font-Raleway
 }
 
 .bg-clip-text {
@@ -50,7 +54,7 @@
     }
 
     .shallow-white{
-        @apply text-[1.2rem] bg-transparent border-[1px] border-grey rounded-[.3rem] text-dark hover:text-light hover:bg-primary hover:border-primary transition ease-in-out duration-300
+        @apply text-[1rem] bg-transparent border-[1px] border-grey rounded-[.3rem] text-dark hover:text-light hover:bg-primary hover:border-primary transition ease-in-out duration-300
     }
 }
 
@@ -195,6 +199,10 @@
 
     .header1{
         @apply bg-primary
+    }
+
+    .header1 .container{
+        @apply max-w-[100rem] mx-auto
     }
 
     .header1__wrapper{
@@ -373,6 +381,10 @@
         @apply py-[2rem]
     }
 
+    .about .container{
+        @apply max-w-[100rem] mx-auto
+    }
+
     .about__wrapper{
         @apply lg:flex lg:gap-x-[5rem]
     }
@@ -518,7 +530,7 @@
     }
 
     .course__text ul li:nth-child(2) a{
-        @apply text-dark font-[600] hover:text-primary transition ease-in-out duration-300
+        @apply text-dark font-[600] hover:text-primary transition ease-in-out duration-300 lg:text-[1.5rem]
     }
 
     .course__text ul li img{
@@ -656,6 +668,10 @@
 
     /** ---------- PROGRAM BANNER ---------- */
 
+    .news{
+        @apply pb-[5rem]
+    }
+
     .news__title{
         @apply font-[700] text-[1.6rem] text-primary pb-[2rem]
     }
@@ -664,16 +680,60 @@
         @apply text-dark w-[25rem]
     }
 
+    .news__wrapper{
+        @apply lg:flex lg:gap-x-[2rem]
+    }
+
     .news__card{
-        @apply bg-light shadow-[0px_0px_50px_0px_rgba(0,0,0,.09)]
+        @apply overflow-hidden bg-light shadow-[0px_5px_4px_0px_rgba(0,0,0,.05)] mb-[1rem] px-[.5rem] min-h-[10rem] lg:px-0
+    }
+
+    .news__card:hover .news__subtitle{
+        @apply transition ease-in duration-300 
+    }
+
+    .news__card:hover .news__subtitle span{
+        @apply top-0 left-0 w-full h-full transition-all duration-500
+    }
+
+    .news__card:hover .news__subtitle p{
+        @apply left-[2%] p-[.5rem] text-[1.1rem] transition-all duration-500
+    }
+
+    .news__card:hover .news__img img{
+        @apply scale-[1.1] transition ease-in-out duration-500
+    }
+
+    .news__img{
+        @apply relative
+    }
+
+    .news__subtitle{
+        @apply transition ease-in duration-300
+    }
+
+    .news__subtitle span{
+        @apply absolute top-[50%] left-[50%] bg-black bg-opacity-50 w-0 h-0 transition-all duration-500
+    }
+
+    .news__subtitle p{
+        @apply absolute top-[2%] left-[10%] bg-primary text-light rounded-[.2rem] font-[600] m-[1rem] text-[0] transition-all duration-500
+    }
+
+    .news__img{
+        @apply overflow-hidden 
+    }
+
+    .news__img img{
+        @apply w-full lg:w-full transition ease-in-out duration-500
     }
 
     .news__content{
-        @apply px-[.5rem] py-[1rem]
+        @apply px-[1rem] py-[2rem]
     }
 
     .news__content a{
-        @apply text-[1.3rem] font-[600]
+        @apply text-[1.3rem] text-dark font-[600] hover:text-primary transition ease-in-out duration-300 lg:w-[10rem] lg:text-[1.6rem] lg:pr-[3rem]
     }
 
     .news__content ul{
@@ -681,7 +741,7 @@
     }
 
     .news__content ul li{
-        @apply text-[1.2rem] font-[400] mr-[1rem] text-primary
+        @apply text-[1.1rem] font-[500] mr-[1rem] text-primary
     }
 
     .news__content ul li i{
@@ -689,6 +749,130 @@
     }
 
     .news__content ul li a{
-        @apply text-[1.2rem] font-[400]
+        @apply text-[1.1rem] text-primary font-[500]
+    }
+
+    .news__content .shallow-white{
+        @apply text-[1.1rem] font-[500] hover:text-light w-fit lg:pr-[1.5rem]
+    }
+
+
+
+    /** ---------- TESTIMONY BANNER ---------- */
+
+    .testimony{
+        @apply bg-[#0EB58208] py-[5rem]
+    }
+
+    .testimony__title{
+        @apply flex flex-col items-center text-center font-[700] text-[1.6rem] text-primary pt-[3rem] lg:text-[1rem]
+    }
+
+    .testimony__title h4{
+        @apply text-dark px-[2.5rem] lg:text-[3rem] lg:w-[50rem]
+    }
+
+    .testimony__item{
+        @apply p-[1rem]
+    }
+
+    .testimony__item ul{
+        @apply flex text-primary text-[1.1rem]
+    }
+
+    .testimony__item ul li{
+        @apply mr-[.3rem]
+    }
+
+    .testimony__item p{
+        @apply text-[1.3rem] text-grey my-[1rem]
+    }
+
+    .testimony__name{
+        @apply flex
+    }
+
+    .testimony__name img{
+        @apply w-[3rem] mr-[1rem]
+    }
+
+    .testimony__name-text h3{
+        @apply text-[1.1rem] font-[600] text-dark
+    }
+
+    .testimony__name-text p{
+        @apply text-[1rem] font-[600] text-primary my-0
+    }
+
+
+
+    /** ---------- APPLY BANNER ---------- */
+
+    .apply{
+        @apply bg-[#0EB58208]
+    }
+
+    .apply__title{
+        @apply flex flex-col items-center text-center font-[700] text-[1.6rem] text-primary mb-[2rem] lg:text-[1rem]
+    }
+
+    .apply__title h4{
+        @apply text-dark px-[2.5rem] lg:text-[3rem] lg:w-[50rem]
+    }
+
+    .apply__wrapper{
+        @apply flex flex-col gap-y-[3.5rem]
+    }
+
+    .apply__card{
+        @apply bg-light shadow-[0px_5px_20px_0px_rgba(0,0,0,.1)] px-[1.5rem] pt-[3rem] pb-[3rem] border-[2px] border-lgreen
+    }
+
+    .apply__text{
+        @apply mt-[1rem] mb-[1.5rem]
+    }
+
+    .apply__text p{
+        @apply text-primary font-[700] text-[1.1rem]
+    }
+
+    .apply__text a{
+        @apply text-dark font-[700] text-[1.7rem] hover:text-primary transition ease-in-out duration-300
+    }
+
+    .apply__content ul{
+        @apply relative
+    }
+
+    .apply__content ul li:first-child{
+        @apply bg-primary rounded-full px-[.8rem] py-[.6rem] w-fit
+    }
+
+    .apply__content ul li a i{
+        @apply text-[1.5rem] font-[700] text-light
+    }
+
+    .apply__content ul li:last-child{
+        @apply absolute h-[5rem] top-[2%] text-light transition-all duration-500 w-fit
+    }
+
+    .apply__content ul li:last-child a{
+        @apply hidden p-0 transition-all duration-500
+    }
+
+    .apply__card:hover .apply__content ul li:first-child{
+        @apply bg-transparent rounded-none w-0 px-0 py-0
+    }
+
+    .apply__card:hover .apply__content ul li a i{
+        @apply text-[0] font-[700] text-light
+    }
+
+    .apply__card:hover .apply__content ul li:last-child{
+        @apply top-0 transition-all duration-500
+    }
+
+    .apply__card:hover .apply__content ul li:last-child a{
+        @apply block text-[1.1rem] py-[.8rem] px-[1rem] transition-all duration-500
     }
 }

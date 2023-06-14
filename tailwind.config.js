@@ -49,6 +49,10 @@ module.exports = {
       animation: {
         sliding1: 'sliding1 3s linear infinite',
         sliding2: 'sliding2 3s linear infinite',
+      },
+
+      fontFamily: {
+        'Raleway' :['Raleway', 'sans-serif'],
       }
     },
   },
