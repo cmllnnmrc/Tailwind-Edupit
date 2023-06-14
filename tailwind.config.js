@@ -12,6 +12,7 @@ module.exports = {
         'lgreen': '#C6F9E9',
         'grey': '#777777',
         'dblue': '#4b5981',
+        'dark-blue': '#18406b',
       },
 
       screens:{

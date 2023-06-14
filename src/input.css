@@ -13,11 +13,15 @@ body{
 
 .bg-clip-text {
     -webkit-text-stroke-color: #ffffff;
-    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-width: 3px;
 }
 
-.banner .tns-outer{
-    @apply flex items-center max-w-[30rem] mx-auto left-0 right-0 lg:max-w-[100rem]
+.banner .tns-controls{
+    @apply absolute top-[50%] left-0 right-0 max-w-[120rem] z-[10] mx-auto flex justify-between
+}
+
+.banner .tns-controls button{
+    @apply bg-primary p-[.8rem] rounded-full text-[1.5rem] flex items-center text-light
 }
 
 .feature .tns-controls{
@@ -33,11 +37,11 @@ body{
 }
 
 .instructor .tns-controls{
-    @apply absolute top-[20%] right-[10%] mx-auto
+    @apply absolute top-[20%] right-[20%] max-w-[6rem] left-0 ml-auto flex justify-between
 }
 
 .instructor .tns-controls button{
-    @apply min-w-[3rem] bg-primary rounded-full px-[1rem] py-[.5rem] text-light text-[1.5rem]
+    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
 }
 
 @layer utilities{
@@ -301,44 +305,48 @@ body{
 
     /** ---------- BANNER ---------- */
 
-    .banner{
-        @apply flex items-center bg-banner-bg min-h-[80vh] bg-cover bg-no-repeat lg:min-h-[110vh]
+    .banner .container{
+        @apply max-w-[100rem];
     }
-
-    .banner__wrapper{
-        @apply flex gap-x-[1rem]
+    
+    .banner__item{
+        @apply pt-[8rem] bg-banner-bg bg-no-repeat bg-cover min-h-[80vh] lg:min-h-[100vh] lg:pt-[12rem]
     }
 
     .banner__content{
-        @apply flex items-center justify-between
+        @apply lg:flex lg:flex-row lg:items-center lg:justify-between
     }
 
-    .banner__content img{
-        @apply hidden lg:flex
+    .banner__img{
+        @apply hidden lg:block
+    }
+    
+    .banner__img img{
+        @apply w-[30rem]
     }
 
     .banner__text{
-        @apply relative flex flex-col text-center items-center text-light lg:items-start lg:text-left
+        @apply relative
     }
 
     .banner__text h2{
-        @apply text-[1.8rem] font-[600] w-[20rem] lg:text-[4rem] lg:w-[45rem]
+        @apply text-light text-[2rem] font-[600] text-center px-[2rem] lg:text-[4rem] lg:text-left lg:px-0 lg:w-[50rem]
     }
 
     .banner__text p{
-        @apply text-[1.3rem] font-[600] mt-[1rem] mb-[3rem] px-[2rem] lg:px-0 lg:text-[1.5rem] w-[40rem]
+        @apply text-light font-medium text-[1.5rem] px-[1rem] text-center mt-[1rem] lg:px-0 lg:text-[1.5rem] lg:text-left lg:w-[45rem]
     }
 
-    .banner__bg-text{
-        @apply absolute left-0 translate-y-[-2rem] bg-clip-text text-transparent text-[5rem] opacity-[0.07] lg:text-[10rem] lg:translate-y-[-5rem]
+    .banner__text p span{
+        @apply block lg:flex
     }
 
     .banner__btn{
-        @apply flex justify-center
+        @apply flex justify-center items-center gap-x-[.5rem] mt-[3rem] text-light lg:justify-start
     }
 
-    .banner__btn ul{
-        @apply flex gap-x-[.5rem] items-center
+    .banner__bg-text{
+        @apply absolute bg-clip-text text-transparent text-[3.5rem] left-0 top-[-2rem] opacity-[.07] lg:text-[5rem]
     }
 
 
@@ -657,7 +665,7 @@ body{
     }
 
     .program__content a{
-        @apply text-[1.5rem] text-dark hover:text-primary font-[600] my-[.5rem] transition ease-in-out duration-300
+        @apply text-[1.5rem] text-dark hover:text-primary font-[600] mt-[1.5rem] transition ease-in-out duration-300
     }
 
     .program__content p{
@@ -765,11 +773,15 @@ body{
     }
 
     .testimony__title{
-        @apply flex flex-col items-center text-center font-[700] text-[1.6rem] text-primary pt-[3rem] lg:text-[1rem]
+        @apply flex flex-col items-center text-center font-[700] text-[1.6rem] text-primary pt-[3rem] lg:text-[1rem] lg:items-start lg:text-left
     }
 
     .testimony__title h4{
-        @apply text-dark px-[2.5rem] lg:text-[3rem] lg:w-[50rem]
+        @apply text-dark px-[2.5rem] lg:text-[3rem] lg:w-[50rem] lg:px-0
+    }
+
+    .testimony__wrapper{
+        @apply lg:grid lg:grid-cols-2 lg:gap-x-[3rem]
     }
 
     .testimony__item{
@@ -785,23 +797,23 @@ body{
     }
 
     .testimony__item p{
-        @apply text-[1.3rem] text-grey my-[1rem]
+        @apply text-[1.3rem] text-grey my-[1rem] lg:text-[1.8rem]
     }
 
     .testimony__name{
-        @apply flex
+        @apply flex items-center
     }
 
     .testimony__name img{
-        @apply w-[3rem] mr-[1rem]
+        @apply w-[3rem] mr-[1rem] lg:w-[5rem]
     }
 
     .testimony__name-text h3{
-        @apply text-[1.1rem] font-[600] text-dark
+        @apply text-[1.1rem] font-[600] text-dark lg:text-[1.3rem]
     }
 
     .testimony__name-text p{
-        @apply text-[1rem] font-[600] text-primary my-0
+        @apply text-[1rem] font-[600] text-primary my-0 lg:text-[1.2rem]
     }
 
 
@@ -809,7 +821,7 @@ body{
     /** ---------- APPLY BANNER ---------- */
 
     .apply{
-        @apply bg-[#0EB58208]
+        @apply bg-[#0EB58208] pb-[5rem]
     }
 
     .apply__title{
@@ -821,7 +833,7 @@ body{
     }
 
     .apply__wrapper{
-        @apply flex flex-col gap-y-[3.5rem]
+        @apply flex flex-col gap-y-[3.5rem] lg:grid lg:grid-cols-2 lg:gap-x-[2rem]
     }
 
     .apply__card{
@@ -874,5 +886,17 @@ body{
 
     .apply__card:hover .apply__content ul li:last-child a{
         @apply block text-[1.1rem] py-[.8rem] px-[1rem] transition-all duration-500
+    }
+
+
+
+    /** ---------- FOOTER ---------- */
+
+    .footer{
+        @apply bg-dark-blue
+    }
+
+    .footer__card{
+        @apply bg-primary translate-y-[-5rem] p-[2rem]
     }
 }
