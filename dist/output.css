@@ -2259,7 +2259,6 @@ video {
 
 .apply {
   background-color: #0EB58208;
-  padding-bottom: 5rem;
 }
 
 .apply__title {
@@ -2435,17 +2434,47 @@ video {
 
 /** ---------- FOOTER ---------- */
 
+.newsletter__card {
+  border-radius: .3rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 181 130 / var(--tw-bg-opacity));
+}
+
+.newsletter__content {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.newsletter__content h4 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.newsletter__content p {
+  font-size: 1.3rem;
+}
+
+.newsletter__content input {
+  width: 100%;
+  border-radius: .3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  --tw-text-opacity: 1;
+  color: rgb(176 175 175 / var(--tw-text-opacity));
+}
+
+/** ---------- FOOTER ---------- */
+
 .footer {
   --tw-bg-opacity: 1;
   background-color: rgb(24 64 107 / var(--tw-bg-opacity));
-}
-
-.footer__card {
-  --tw-translate-y: -5rem;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  --tw-bg-opacity: 1;
-  background-color: rgb(14 181 130 / var(--tw-bg-opacity));
-  padding: 2rem;
 }
 
 .table {

@@ -821,7 +821,7 @@ body{
     /** ---------- APPLY BANNER ---------- */
 
     .apply{
-        @apply bg-[#0EB58208] pb-[5rem]
+        @apply bg-[#0EB58208]
     }
 
     .apply__title{
@@ -892,11 +892,31 @@ body{
 
     /** ---------- FOOTER ---------- */
 
-    .footer{
-        @apply bg-dark-blue
+    .newsletter__card{
+        @apply bg-primary rounded-[.3rem]
     }
 
-    .footer__card{
-        @apply bg-primary translate-y-[-5rem] p-[2rem]
+    .newsletter__content{
+        @apply px-[1rem] py-[2rem] text-light
+    }
+
+    .newsletter__content h4{
+        @apply text-[2rem] font-[600] 
+    }
+
+    .newsletter__content p{
+        @apply text-[1.3rem]
+    }
+
+    .newsletter__content input{
+        @apply text-[1rem] text-[#b0afaf] px-[1.5rem] py-[1rem] w-full rounded-[.3rem]
+    }
+
+
+
+    /** ---------- FOOTER ---------- */
+
+    .footer{
+        @apply bg-dark-blue
     }
 }
