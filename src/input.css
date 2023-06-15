@@ -44,6 +44,22 @@ body{
     @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
 }
 
+.news .tns-controls{
+    @apply absolute top-[15%] right-[20%] max-w-[6rem] left-0 ml-auto flex justify-between
+}
+
+.news .tns-controls button{
+    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
+}
+
+.testimony .tns-controls{
+    @apply absolute bottom-[5%] right-[43%] max-w-[6rem] left-0 ml-auto flex justify-between
+}
+
+.testimony .tns-controls button{
+    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
+}
+
 @layer utilities{
     .btn{
         @apply inline-block py-[.8rem] px-[1.5rem] border-transparent
@@ -239,7 +255,11 @@ body{
 
 
     .header2{
-        @apply z-[999] absolute bg-lblue p-[.5rem] max-w-[80rem] mx-auto left-0 right-0 top-[7rem] rounded-[.5rem]
+        @apply z-[999] fixed bg-lblue p-[.5rem] max-w-[80rem] mx-auto left-0 right-0 top-[7rem] rounded-[.5rem]
+    }
+
+    .fix{
+        @apply top-0 transition-all duration-300
     }
 
     .header2__wrapper{
@@ -298,6 +318,22 @@ body{
         @apply text-primary
     }
 
+    .header2__nav ul.fourth-drop{
+        @apply absolute top-0 left-[10rem] bg-primary lg:hidden
+    }
+
+    .header2__nav ul.third-drop li:hover ul.fourth-drop{
+        @apply min-w-[15rem] block
+    }
+
+    .header2__nav ul.third-drop li:hover ul.fourth-drop li a{
+        @apply text-light
+    }
+
+    .header2__nav ul.third-drop li:hover ul.fourth-drop li:hover a{
+        @apply text-primary
+    }
+
     .header2__btn{
         @apply text-light ml-[2rem]
     }
@@ -310,7 +346,7 @@ body{
     }
     
     .banner__item{
-        @apply pt-[8rem] bg-banner-bg bg-no-repeat bg-cover min-h-[80vh] lg:min-h-[100vh] lg:pt-[12rem]
+        @apply pt-[8rem] bg-banner-bg bg-no-repeat bg-cover min-h-[80vh] lg:min-h-[100vh] lg:pt-[15rem] lg:flex lg:items-center
     }
 
     .banner__content{
@@ -346,7 +382,7 @@ body{
     }
 
     .banner__bg-text{
-        @apply absolute bg-clip-text text-transparent text-[3.5rem] left-0 top-[-2rem] opacity-[.07] lg:text-[5rem]
+        @apply absolute bg-clip-text text-transparent text-[3.5rem] left-0 top-[-2rem] opacity-[.07] lg:text-[7rem]
     }
 
 
@@ -677,15 +713,15 @@ body{
     /** ---------- PROGRAM BANNER ---------- */
 
     .news{
-        @apply pb-[5rem]
+        @apply relative pb-[5rem]
     }
 
     .news__title{
-        @apply font-[700] text-[1.6rem] text-primary pb-[2rem]
+        @apply font-[700] text-[1.6rem] text-primary pb-[2rem] lg:text-[1rem]
     }
 
     .news__title h4{
-        @apply text-dark w-[25rem]
+        @apply text-dark w-[25rem] lg:text-[3rem] lg:w-[50rem]
     }
 
     .news__wrapper{
@@ -769,7 +805,7 @@ body{
     /** ---------- TESTIMONY BANNER ---------- */
 
     .testimony{
-        @apply bg-[#0EB58208] py-[5rem]
+        @apply relative bg-[#0EB58208] py-[5rem]
     }
 
     .testimony__title{
@@ -821,7 +857,7 @@ body{
     /** ---------- APPLY BANNER ---------- */
 
     .apply{
-        @apply bg-[#0EB58208]
+        @apply bg-[#0EB58208] py-[3rem]
     }
 
     .apply__title{
@@ -893,15 +929,19 @@ body{
     /** ---------- FOOTER ---------- */
 
     .newsletter__card{
-        @apply flex items-center bg-primary rounded-[.8rem] min-h-[25rem] translate-y-[7.5rem]
+        @apply flex items-center bg-primary rounded-[.8rem] min-h-[25rem] translate-y-[7.5rem] lg:min-h-[15rem]
     }
 
     .newsletter__content{
-        @apply text-light px-[2rem] w-full
+        @apply text-light px-[2rem] w-full lg:grid lg:grid-cols-[2.5fr_2fr] lg:justify-between
+    }
+
+    .newsletter__form{
+        @apply flex items-center
     }
 
     .newsletter__content h4{
-        @apply text-[2rem] font-[600] 
+        @apply text-[2rem] font-[600]
     }
 
     .newsletter__content p{
@@ -909,11 +949,11 @@ body{
     }
 
     .newsletter__content input{
-        @apply text-[1rem] text-[#b0afaf] px-[1.5rem] py-[1rem] w-full rounded-[.3rem]
+        @apply text-[1rem] text-[#b0afaf] px-[1.5rem] py-[1rem] w-full rounded-[.3rem] lg:w-[25rem]
     }
 
     .newsletter__btn{
-        @apply bg-dark w-full text-center py-[1rem] mt-[1.5rem]
+        @apply bg-dark w-full text-center py-[1rem] mt-[1.5rem] lg:w-[10rem] lg:mt-0
     }
 
 
@@ -925,39 +965,55 @@ body{
     }
 
     .footer__wrapper{
-        @apply py-[5rem]
+        @apply py-[5rem] lg:grid lg:grid-cols-4 lg:gap-x-[5rem]
     }
 
     .footer__item{
-        @apply flex flex-col items-center text-center justify-center text-light
+        @apply flex flex-col items-center text-center justify-center text-light lg:text-left lg:items-start
     }
 
     .footer__content h4{
         @apply my-[1rem] text-[1.5rem] font-[600]
     }
 
+    .footer__content p{
+        @apply my-[1.2rem]
+    }
+
+    .footer__social{
+        @apply mt-[1.2rem]
+    }
+
+    .footer__content ul{
+        @apply lg:pt-[.5rem]
+    }
+
     .footer__content ul li{
         @apply mb-[1rem] text-[1.1rem]
     }
 
+    .footer__content ul li a{
+        @apply hover:text-primary transition ease-in-out duration-300
+    }
+
     .footer__social ul{
-        @apply flex gap-x-[1rem] justify-center
+        @apply flex gap-x-[1rem] justify-center lg:justify-start
     }
 
     .footer__social ul li a{
-        @apply border-[1px] border-light rounded-[.3rem] py-[.5rem] px-[1rem]
+        @apply border-[1px] border-light rounded-[.3rem] py-[.5rem] px-[.5rem] hover:bg-primary hover:border-primary transition ease-in-out duration-300
     }
 
     .footer__social ul li:first-child a{
-        @apply  p-[.5rem] px-[1.1rem]
+        @apply  py-[.5rem] px-[.7rem]
     }
 
     .footer__item:last-child{
-        @apply flex items-start text-center justify-center text-light
+        @apply flex items-start text-center justify-center text-light lg:justify-normal
     }
 
     .footer__content table tr{
-        @apply border-b-[1px] border-light flex justify-between text-start w-[28rem] py-[.5rem] text-[1.1rem]
+        @apply border-b-[1px] border-light flex justify-between text-start w-[28rem] py-[.5rem] text-[1.1rem] lg:w-[20rem]
     }
 
     .footer__content table tr td:last-child{
@@ -969,7 +1025,7 @@ body{
     }
 
     .subfooter__content{
-        @apply flex flex-col gap-y-[1rem] items-center text-light
+        @apply text-light lg:flex lg:justify-between lg:text-[1.2rem]
     }
 
     .subfooter__content ul{

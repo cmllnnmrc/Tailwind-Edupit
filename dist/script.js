@@ -1,4 +1,3 @@
-
 const baba = document.querySelectorAll(".header-mob__nav ul li h4");
 baba.forEach((drop) => {
   drop.addEventListener("click", () => {
@@ -12,6 +11,16 @@ const mobileNav = document.querySelector(".header-mob__nav");
 toggleMenu.addEventListener("click", () => {
   toggleMenu.classList.toggle("open");
   mobileNav.classList.toggle("open");
+});
+
+const header = document.querySelector(".header2");
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset >= 50) {
+    header.classList.add("fix");
+  } else {
+    header.classList.remove("fix");
+  }
 });
 
 const tabNav = document.querySelectorAll(".tab-nav-link");
