@@ -25,7 +25,7 @@ body{
 }
 
 .banner .tns-controls button{
-    @apply bg-primary p-[.8rem] rounded-full text-[1.5rem] flex items-center text-light
+    @apply bg-primary hover:bg-dark transition ease-in-out duration-300 p-[.8rem] rounded-full text-[1.5rem] flex items-center text-light
 }
 
 .feature .tns-controls{
@@ -33,7 +33,7 @@ body{
 }
 
 .feature .tns-controls button{
-    @apply text-[1.5rem] text-light bg-primary rounded-full px-[1.2rem] py-[.7rem] max-w-[100rem]
+    @apply text-[1.5rem] hover:bg-dark transition ease-in-out duration-300 text-light bg-primary rounded-full px-[1.2rem] py-[.7rem] max-w-[100rem]
 }
 
 .feature .tns-outer{
@@ -45,7 +45,7 @@ body{
 }
 
 .instructor .tns-controls button{
-    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
+    @apply bg-primary hover:bg-dark transition ease-in-out duration-300 rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
 }
 
 .news .tns-controls{
@@ -53,7 +53,7 @@ body{
 }
 
 .news .tns-controls button{
-    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
+    @apply bg-primary hover:bg-dark transition ease-in-out duration-300 rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
 }
 
 .testimony .tns-controls{
@@ -61,7 +61,7 @@ body{
 }
 
 .testimony .tns-controls button{
-    @apply bg-primary rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
+    @apply bg-primary hover:bg-dark transition ease-in-out duration-300 rounded-full px-[.7rem] py-[.6rem] text-light text-[1.5rem] flex items-center
 }
 
 @layer utilities{
@@ -889,11 +889,11 @@ body{
     }
 
     .apply__card{
-        @apply bg-light shadow-[0px_5px_20px_0px_rgba(0,0,0,.1)] px-[1.5rem] pt-[3rem] border-[2px] border-lgreen min-h-[30rem] lg:min-h-[25rem]
+        @apply bg-light shadow-[0px_5px_20px_0px_rgba(0,0,0,.1)] px-[1.5rem] pt-[3rem] border-[2px] border-lgreen min-h-[30rem] lg:min-h-[20rem]
     }
 
     .apply__card:last-child{
-        @apply bg-light shadow-[0px_5px_20px_0px_rgba(0,0,0,.1)] px-[1.5rem] pt-[3rem] border-[2px] border-lgreen min-h-[27rem] lg:min-h-[25rem]
+        @apply bg-light shadow-[0px_5px_20px_0px_rgba(0,0,0,.1)] px-[1.5rem] pt-[3rem] border-[2px] border-lgreen min-h-[27rem] lg:min-h-[20rem]
     }
 
     .apply__text{
@@ -906,6 +906,14 @@ body{
 
     .apply__text a{
         @apply text-dark font-[700] text-[1.7rem] hover:text-primary transition ease-in-out duration-300
+    }
+
+    .apply__content{
+        @apply lg:flex lg:gap-x-[5rem] 
+    }
+
+    .apply__container{
+        @apply lg:min-h-[15rem]
     }
 
     .apply__content ul{
@@ -965,11 +973,11 @@ body{
     }
 
     .newsletter__content input{
-        @apply text-[1rem] text-[#b0afaf] px-[1.5rem] py-[1rem] w-full rounded-[.3rem] lg:w-[25rem]
+        @apply focus:outline-none text-[1rem] text-[#b0afaf] px-[1.5rem] py-[1rem] w-full rounded-[.3rem] lg:w-[25rem]
     }
 
     .newsletter__btn{
-        @apply bg-dark w-full text-center py-[1rem] mt-[1.5rem] lg:w-[10rem] lg:mt-0
+        @apply bg-dark hover:bg-dark-blue cursor-pointer w-full text-center py-[1rem] mt-[1.5rem] lg:w-[10rem] lg:mt-0 transition ease-in-out duration-300 rounded-[.3rem]
     }
 
 
@@ -981,11 +989,15 @@ body{
     }
 
     .footer__wrapper{
-        @apply py-[5rem] lg:grid lg:grid-cols-4 lg:gap-x-[5rem]
+        @apply lg:flex lg:justify-between pb-[5rem] lg:pb-[2rem]
     }
 
     .footer__item{
         @apply flex flex-col items-center text-center justify-center text-light lg:text-left lg:items-start
+    }
+
+    .footer__item:first-child{
+        @apply lg:max-w-[15rem]
     }
 
     .footer__content h4{

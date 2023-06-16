@@ -2453,7 +2453,7 @@ video {
 
 @media (min-width: 1024px) {
   .apply__card {
-    min-height: 25rem;
+    min-height: 20rem;
   }
 }
 
@@ -2474,7 +2474,7 @@ video {
 
 @media (min-width: 1024px) {
   .apply__card:last-child {
-    min-height: 25rem;
+    min-height: 20rem;
   }
 }
 
@@ -2505,6 +2505,18 @@ video {
 .apply__text a:hover {
   --tw-text-opacity: 1;
   color: rgb(14 181 130 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .apply__content {
+    display: flex;
+    -moz-column-gap: 5rem;
+         column-gap: 5rem;
+  }
+
+  .apply__container {
+    min-height: 15rem;
+  }
 }
 
 .apply__content ul {
@@ -2647,6 +2659,11 @@ video {
   color: rgb(176 175 175 / var(--tw-text-opacity));
 }
 
+.newsletter__content input:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 @media (min-width: 1024px) {
   .newsletter__content input {
     width: 25rem;
@@ -2656,11 +2673,23 @@ video {
 .newsletter__btn {
   margin-top: 1.5rem;
   width: 100%;
+  cursor: pointer;
+  border-radius: .3rem;
   --tw-bg-opacity: 1;
   background-color: rgb(42 55 76 / var(--tw-bg-opacity));
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter__btn:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 64 107 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {
@@ -2679,16 +2708,14 @@ video {
 }
 
 .footer__wrapper {
-  padding-top: 5rem;
   padding-bottom: 5rem;
 }
 
 @media (min-width: 1024px) {
   .footer__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    -moz-column-gap: 5rem;
-         column-gap: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
   }
 }
 
@@ -2706,6 +2733,10 @@ video {
   .footer__item {
     align-items: flex-start;
     text-align: left;
+  }
+
+  .footer__item:first-child {
+    max-width: 15rem;
   }
 }
 
@@ -3000,6 +3031,16 @@ body {
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.banner .tns-controls button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
 }
 
 .feature .tns-controls {
@@ -3027,6 +3068,16 @@ body {
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feature .tns-controls button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
 }
 
 .feature .tns-outer {
@@ -3064,6 +3115,16 @@ body {
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.instructor .tns-controls button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
 }
 
 .news .tns-controls {
@@ -3090,6 +3151,16 @@ body {
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news .tns-controls button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
 }
 
 .testimony .tns-controls {
@@ -3117,4 +3188,14 @@ body {
   font-size: 1.5rem;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.testimony .tns-controls button:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(42 55 76 / var(--tw-bg-opacity));
 }
