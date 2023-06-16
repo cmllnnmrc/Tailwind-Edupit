@@ -2,7 +2,7 @@ const baba = document.querySelectorAll(".header-mob__nav ul li h4");
 baba.forEach((drop) => {
   drop.addEventListener("click", () => {
     drop.nextElementSibling.classList.toggle("open");
-    drop.querySelector("i").classList.toggle("open");
+    drop.querySelector(".icon").classList.toggle("open");
   });
 });
 
