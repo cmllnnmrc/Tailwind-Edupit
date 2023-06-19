@@ -921,15 +921,15 @@ body{
     }
 
     .apply__content ul li:first-child{
-        @apply bg-primary w-fit rounded-full py-[.5rem] px-[.8rem] text-light
+        @apply bg-primary w-fit rounded-full py-[.5rem] px-[.8rem] text-light transition-all duration-500
     }
 
     .apply__content ul li:last-child{
-        @apply absolute top-0 bg-primary w-[5rem] h-[2.5rem] opacity-0 py-[.5rem] rounded-[.3rem]
+        @apply absolute top-0 bg-primary w-[5rem] h-[2.5rem] opacity-0 py-[.5rem] rounded-[.3rem] transition-all duration-500
     }
 
     .apply__content ul li:last-child a{
-        @apply  text-light opacity-0 hidden text-start 
+        @apply  text-light opacity-0 hidden text-start transition-all duration-500
     }
 
     .apply__card:hover .apply__content ul li:first-child{
